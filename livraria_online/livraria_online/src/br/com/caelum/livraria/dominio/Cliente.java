@@ -6,6 +6,9 @@ public class Cliente {
 	private final Telefone telefone;
 	private String cep;
 	
+	private String ddd;
+	private String numero;
+	
 	public Cliente(String id, Telefone telefone, String cep) {
 		this.id = id;
 		this.telefone = telefone;
@@ -27,6 +30,11 @@ public class Cliente {
 		return id.hashCode();
 	}
 
+	
+	public String getTelefoneFormatado() {
+		return String.format("(%s) %s", ddd, numero); 
+	}
+	
 	public String getTelefone() {
 		return telefone.toString();
 	}
