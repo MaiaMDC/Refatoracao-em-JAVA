@@ -13,7 +13,7 @@ public class ClienteTest {
 
 	@Test
 	public void igualdade() {
-		Cliente outroCliente = new Cliente(ID_CLIENTE, UM_TELEFONE);
+		Cliente outroCliente = new Cliente(ID_CLIENTE, UM_TELEFONE, ObjetosParaTestes.CEP);
 		
 		assertThat(UM_CLIENTE, is(equalTo(outroCliente)));
 		assertThat(UM_CLIENTE.hashCode(), is(equalTo(outroCliente.hashCode())));
