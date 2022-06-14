@@ -3,16 +3,16 @@ package br.com.caelum.livraria.dominio;
 public class Cliente {
 
 	private final String id;
-	private final Telefone telefone;
 	private String cep;
 	
 	private String ddd;
 	private String numero;
 	
-	public Cliente(String id, Telefone telefone, String cep) {
+	public Cliente(String id, String ddd, String numero, String cep) {
 		this.id = id;
-		this.telefone = telefone;
 		this.cep = cep;
+		this.ddd = ddd;
+		this.numero = numero;
 	}
 
 	@Override
@@ -36,7 +36,7 @@ public class Cliente {
 	}
 	
 	public String getTelefone() {
-		return telefone.toString();
+		return getTelefoneFormatado();
 	}
 
 	public String getCep() {
